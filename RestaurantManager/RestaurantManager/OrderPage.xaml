@@ -22,6 +22,13 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <AppBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" IsOpen="True">
+            <AppBarButton  Icon="Home" Click="HomeButtonOP"/>
+        </AppBar>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="0">
+            <ListView Name="AddToOrderLV"/>
+        </StackPanel>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1">
             <TextBlock Foreground="White" Text="Special Requests:" />
@@ -31,12 +38,16 @@
             <TextBlock Foreground="White" Text="Order Items:" />
         </StackPanel>
 
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">
+            <ListView Name="SubmitOrdersLV"/>
+        </StackPanel>
+
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0">
-            <TextBlock Foreground="White" Text="**Add to Order**" />
+            <Button Name="AddToOrder" Foreground="White" Content="Add to Order" Click="AddToOrder_Click" />
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2">
-            <TextBlock Foreground="White" Text="**Submit Orders**" />
+            <Button Name="SubmitOrder" Foreground="White" Content="Submit Orders" Click="SubmitOrder_Click"/>
         </StackPanel>
 
     </Grid>

@@ -8,15 +8,24 @@
     mc:Ignorable="d">
 
     <Grid Background="Black">
-        
 
         <Grid.RowDefinitions>
             <RowDefinition Height="6*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
-            <TextBlock Foreground="White" Text="**Clear All Orders**" />
+
+        <AppBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" IsOpen="True" >
+            <AppBarButton  Icon="Home" Click="HomeButtonEP" />
+        </AppBar>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0">
+            <GridView Name="ExpediatePageGV" />
         </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
+            <Button Foreground="White" Content="Clear All Orders" Click="Button_Click" />
+        </StackPanel>
+        
     </Grid>
 </Page>

@@ -29,11 +29,13 @@
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0">
-            <TextBlock Foreground="White" FontSize="16" Text="**Go to Orders View**" />
+            <Button Name ="GoToOrders" Content="Go to Orders View" Click="GoToOrders_Click"/>
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1">
-            <TextBlock Foreground="White" FontSize="16" Text="**Submit Orders**" />
+            <Button Name="SubmitOrder" Content="Submit Orders" Click="SubmitOrder_Click"/>
+     
         </StackPanel>
+
     </Grid>
 </Page>
